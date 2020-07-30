@@ -7,7 +7,7 @@
 ## We create a list for all functions
 ## And finally then we compute the inverse of matrix using solve function
 
-## In this function we are setting the vaue of matrix
+## calculates the inverse of the special "matrix" created with the above
 
 makeCacheMatrix <- function(x = matrix()) {
         inv <- NULL
@@ -19,7 +19,10 @@ makeCacheMatrix <- function(x = matrix()) {
 }
 
 
-## Finding the inverse of matrix
+## creates a special "matrix" that cache its inverse
+## This function computes the inverse of the special "matrix" returned by makeCacheMatrix above.
+##If the inverse has already been calculated (and the matrix has not changed), 
+## then cacheSolve should retrieve the inverse from the cache.
 
 cacheSolve <- function(x, ...) {
         inv <- x$getinverse()
